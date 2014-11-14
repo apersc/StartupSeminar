@@ -9,15 +9,33 @@
 </head>
 <body>
     <h1>Analyst rating<h1>
-    <h2>Select a analyst</h2>
+    <h2>Select an analyst</h2>
     <form role="form">
         <div class="form-group">
             <input class="form-control" id="searchinput" type="search" placeholder="Search..." />
         </div>
         <div id="searchlist" class="list-group">
-            <a class="list-group-item" href="mockup.html">Analyst 1</a>
-            <a class="list-group-item" href="mockup.html">Analyst 2</a>
-            <a class="list-group-item" href="mockup.html">Analyst 3</a>
+            <a class="list-group-item" href="mockup.html">
+                Analyst 1
+                <span class="rating glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span class="rating glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span class="rating glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span class="rating glyphicon glyphicon-star" aria-hidden="true"></span>
+            </a>
+            <a class="list-group-item" href="mockup.html">
+                Analyst 2
+                <span class="rating glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span class="rating glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span class="rating glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+                <span class="rating glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+            </a>
+            <a class="list-group-item" href="mockup.html">
+                Analyst 3
+                <span class="rating glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span class="rating glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+                <span class="rating glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+                <span class="rating glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+            </a>
         </div>
     </form>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
