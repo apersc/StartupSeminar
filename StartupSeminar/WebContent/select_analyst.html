@@ -16,21 +16,21 @@
         </div>
         <div id="searchlist" class="list-group">
             <a class="list-group-item" href="mockup.html">
-                Analyst 1
+                <span class="searchitem">Ed Hyman</span>
                 <span class="rating glyphicon glyphicon-star" aria-hidden="true"></span>
                 <span class="rating glyphicon glyphicon-star" aria-hidden="true"></span>
                 <span class="rating glyphicon glyphicon-star" aria-hidden="true"></span>
                 <span class="rating glyphicon glyphicon-star" aria-hidden="true"></span>
             </a>
             <a class="list-group-item" href="mockup.html">
-                Analyst 2
+                <span class="searchitem">David Zion</span>
                 <span class="rating glyphicon glyphicon-star" aria-hidden="true"></span>
                 <span class="rating glyphicon glyphicon-star" aria-hidden="true"></span>
                 <span class="rating glyphicon glyphicon-star-empty" aria-hidden="true"></span>
                 <span class="rating glyphicon glyphicon-star-empty" aria-hidden="true"></span>
             </a>
             <a class="list-group-item" href="mockup.html">
-                Analyst 3
+                <span class="searchitem">Joseph Nadol</span>
                 <span class="rating glyphicon glyphicon-star" aria-hidden="true"></span>
                 <span class="rating glyphicon glyphicon-star-empty" aria-hidden="true"></span>
                 <span class="rating glyphicon glyphicon-star-empty" aria-hidden="true"></span>
@@ -42,7 +42,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <script src="bootstrap-list-filter.min.js"></script>
 <script>
-    $('#searchlist').btsListFilter('#searchinput');
+    $('#searchlist').btsListFilter('#searchinput', {itemChild: 'span.searchitem'});
 </script>
 </body>
 </html>
