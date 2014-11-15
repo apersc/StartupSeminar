@@ -9,7 +9,7 @@
 //= require_tree .
 //= require_self
 //= require bootstrap
-//= require bootstrap-list-filter.min
+//= require highcharts
 
 if (typeof jQuery !== 'undefined') {
 	(function($) {
