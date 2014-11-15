@@ -10,6 +10,7 @@
 //= require_self
 //= require bootstrap
 //= require highcharts
+//= require highcharts-more
 
 if (typeof jQuery !== 'undefined') {
 	(function($) {
