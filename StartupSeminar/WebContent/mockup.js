@@ -1,166 +1,305 @@
 $(function() {
+
+	var showAdidasMorgan = function() {
 	$('#mockup').highcharts(
 			{
+				chart : {
+					renderTo : 'container',
+				},
 				title : {
-					text : 'Credibility'
+					text : 'Adidas AG (ADS.DE)'
 				},
-				legend: {
-					enabled: false
-				},
-				xAxis : {
-					title : {
-						text : ''
-					},
-					categories : [ '2003', '2004', '2005', '2006', '2007',
-							'2008', '2009', '2010', '2011', '2012', '2013' ]
-				},
-				yAxis : {
-					title : {
-						text : 'accuracy'
-					},
-					plotBands : {
-						from : 5,
-						to : -5,
-						color : 'rgba(50, 245, 31, .4)'
-					},
-					max : 40,
-					min : -40,
-					labels : {
-						format : '{value} %'
+				plotOptions: {
+					area: {
+						marker: {
+							enabled: false
+						}
 					}
 				},
-				series : [ {
-					name : 'accuracy',
-					data : [ 9.14, -11.90, 7.28, 5.9, -8.41, 12.58, 9.22,
-							-35.66, -8.33, 11.54, -12.79 ]
-				} ]
-			});
-});
-
-var badAnalysist = true;
-
-function switchCharts() {
-	$('#mockup').highcharts().destroy();
-	badAnalysist = !badAnalysist;
-	var value;
-	if (!badAnalysist) {
-		$('#mockup')
-				.highcharts(
+				xAxis: {
+					type: 'datetime'
+				},
+				yAxis: {
+					title: {
+						text: ''
+					}
+				},
+				series : [
 						{
-							title : {
-								text : 'Credibility'
-							},
-							legend: {
-								enabled: false
-							},
-							xAxis : {
-								title : {
-									text : ''
-								},
-								categories : [ '2003', '2004', '2005', '2006',
-										'2007', '2008', '2009', '2010', '2011',
-										'2012', '2013' ]
-							},
-							yAxis : {
-								title : {
-									text : 'accuracy'
-								},
-								plotBands : {
-									from : 5,
-									to : -5,
-									color : 'rgba(50, 245, 31, .4)'
-								},
-								max : 20,
-								min : -20,
-								labels : {
-									format : '{value} %'
-								}
-							},
-							series : [ {
-								name : 'accuracy',
-								data : [ 2.14, -1.90, 4.28, 1.3, -4.41, 2.58,
-										-3.5, -4.66, 2.33, -3.54, -2.79 ]
-							} ]
-						});
-		value = 'Worse Analysist';
-	}else {
-		$('#mockup').highcharts(
-				{
-					title : {
-						text : 'Credibility'
-					},
-					legend: {
-						enabled: false
-					},
-					xAxis : {
-						title : {
-							text : ''
+							data : [ [ 1320102000000, 52 ], 
+							         [ 1322694000000, 51.56 ],
+									[ 1325458800000, 51.42 ],
+									[ 1328050800000, 57.23 ],
+									[ 1330556400000, 60.2 ], 
+									[ 1330556400000, 61.1 ],
+									[ 1335823200000, 63 ], 
+									[ 1338501600000, 57.2 ],
+									[ 1341180000000, 57.4 ], 
+									[ 1343772000000, 60.9 ],
+									[ 1346623200000, 62.21 ],
+									[ 1349042400000, 65.5 ],
+									[ 1351724400000, 66.49 ],
+									[ 1354489200000, 67.32 ],
+									[ 1356994800000, 67.33 ],
+									[ 1359673200000, 70.49 ],
+									[ 1362092400000, 70.54 ],
+									[ 1364767200000, 80.94 ],
+									[ 1367359200000, 79.3 ], 
+									[ 1370210400000, 82.5 ],
+									[ 1372629600000, 84.08 ],
+									[ 1375308000000, 85.25 ],
+									[ 1377986400000, 81.9 ],
+									[ 1380578400000, 80.46 ],
+									[ 1383260400000, 83.73 ],
+									[ 1385852400000, 89.3 ],
+									[ 1388530800000, 92.64 ],
+									[ 1391209200000, 81.5 ],
+									[ 1393628400000, 81.07 ],
+									[ 1396303200000, 78.86 ],
+									[ 1398895200000, 76.93 ],
+									[ 1401573600000, 78.5 ], 
+									[ 1404165600000, 73.8 ],
+									[ 1406844000000, 58.35 ],
+									[ 1409522400000, 57.36 ],
+									[ 1412114400000, 59.86 ],
+									[ 1414796400000, 59.53 ], ],
+							type : 'area',
+							fillColor : 'rgba(255, 255, 255, 0)',
+							name: 'Stock prices'
 						},
-						categories : [ '2003', '2004', '2005', '2006', '2007',
-								'2008', '2009', '2010', '2011', '2012', '2013' ]
-					},
-					yAxis : {
-						title : {
-							text : 'accuracy'
+						{
+							type : 'scatter',
+							name: 'Predictions',
+							data : [ [ 1320102000000, 62 ], 
+							         [ 1351724400000, 75 ],
+									[ 1383260400000, 68 ], 
+									[ 1414796400000, 61 ],
+									[ 1446332400000, 46 ] ]
 						},
-						plotBands : {
-							from : 5,
-							to : -5,
-							color : 'rgba(50, 245, 31, .4)'
-						},
-						max : 40,
-						min : -40,
-						labels : {
-							format : '{value} %'
-						}
-					},
-					series : [ {
-						name : 'accuracy',
-						data : [ 9.14, -11.90, 7.28, 5.9, -8.41, 12.58, 9.22,
-								-35.66, -8.33, 11.54, -12.79 ]
-					} ]
-				});
-		value = 'Better Analysist';
-	}
+						{
+							type: 'arearange',
+							name: 'Future Stock Price Prediction',
+								data: [[1414796400000, 59.53, 59.53], [1446324000000, 53, 39.02]]
+						}]
 
-	$("#button").html(value);
+			});
+
+	};
+
+	var showAdidasDeutschBank = function() {
+	$('#mockup').highcharts(
+			{
+				chart : {
+					renderTo : 'container',
+				},
+				title : {
+					text : 'Adidas AG (ADS.DE)'
+				},
+				plotOptions: {
+					area: {
+						marker: {
+							enabled: false
+						}
+					}
+				},
+				xAxis: {
+					type: 'datetime'
+				},
+				yAxis: {
+					title: {
+						text: ''
+					}
+				},
+				series : [
+						{
+							data : [ [ 1320102000000, 52 ], 
+							         [ 1322694000000, 51.56 ],
+									[ 1325458800000, 51.42 ],
+									[ 1328050800000, 57.23 ],
+									[ 1330556400000, 60.2 ], 
+									[ 1330556400000, 61.1 ],
+									[ 1335823200000, 63 ], 
+									[ 1338501600000, 57.2 ],
+									[ 1341180000000, 57.4 ], 
+									[ 1343772000000, 60.9 ],
+									[ 1346623200000, 62.21 ],
+									[ 1349042400000, 65.5 ],
+									[ 1351724400000, 66.49 ],
+									[ 1354489200000, 67.32 ],
+									[ 1356994800000, 67.33 ],
+									[ 1359673200000, 70.49 ],
+									[ 1362092400000, 70.54 ],
+									[ 1364767200000, 80.94 ],
+									[ 1367359200000, 79.3 ], 
+									[ 1370210400000, 82.5 ],
+									[ 1372629600000, 84.08 ],
+									[ 1375308000000, 85.25 ],
+									[ 1377986400000, 81.9 ],
+									[ 1380578400000, 80.46 ],
+									[ 1383260400000, 83.73 ],
+									[ 1385852400000, 89.3 ],
+									[ 1388530800000, 92.64 ],
+									[ 1391209200000, 81.5 ],
+									[ 1393628400000, 81.07 ],
+									[ 1396303200000, 78.86 ],
+									[ 1398895200000, 76.93 ],
+									[ 1401573600000, 78.5 ], 
+									[ 1404165600000, 73.8 ],
+									[ 1406844000000, 58.35 ],
+									[ 1409522400000, 57.36 ],
+									[ 1412114400000, 59.86 ],
+									[ 1414796400000, 59.53 ], ],
+							type : 'area',
+							fillColor : 'rgba(255, 255, 255, 0)',
+							name: 'Stock prices'
+						},
+						{
+							type : 'scatter',
+							name: 'Predictions',
+							data : [ [ 1320102000000, 45 ], 
+							         [ 1351724400000, 64 ],
+									[ 1383260400000, 70 ], 
+									[ 1414796400000, 80 ],
+									[ 1446332400000, 57 ] ]
+						},
+						{
+							type: 'arearange',
+							name: 'Future Stock Price Prediction',
+								data: [[1414796400000, 59.53, 59.53], [1446324000000, 48.45, 65.5]]
+						}]
+
+			});
+};
+
+var showAdidasIndependent = function() {
+		$('#mockup').highcharts(
+			{
+				chart : {
+					renderTo : 'container',
+				},
+				title : {
+					text : 'Adidas AG (ADS.DE)'
+				},
+				plotOptions: {
+					area: {
+						marker: {
+							enabled: false
+						}
+					}
+				},
+				xAxis: {
+					type: 'datetime'
+				},
+				yAxis: {
+					title: {
+						text: ''
+					}
+				},
+				series : [
+						{
+							data : [ [ 1320102000000, 52 ], 
+							         [ 1322694000000, 51.56 ],
+									[ 1325458800000, 51.42 ],
+									[ 1328050800000, 57.23 ],
+									[ 1330556400000, 60.2 ], 
+									[ 1330556400000, 61.1 ],
+									[ 1335823200000, 63 ], 
+									[ 1338501600000, 57.2 ],
+									[ 1341180000000, 57.4 ], 
+									[ 1343772000000, 60.9 ],
+									[ 1346623200000, 62.21 ],
+									[ 1349042400000, 65.5 ],
+									[ 1351724400000, 66.49 ],
+									[ 1354489200000, 67.32 ],
+									[ 1356994800000, 67.33 ],
+									[ 1359673200000, 70.49 ],
+									[ 1362092400000, 70.54 ],
+									[ 1364767200000, 80.94 ],
+									[ 1367359200000, 79.3 ], 
+									[ 1370210400000, 82.5 ],
+									[ 1372629600000, 84.08 ],
+									[ 1375308000000, 85.25 ],
+									[ 1377986400000, 81.9 ],
+									[ 1380578400000, 80.46 ],
+									[ 1383260400000, 83.73 ],
+									[ 1385852400000, 89.3 ],
+									[ 1388530800000, 92.64 ],
+									[ 1391209200000, 81.5 ],
+									[ 1393628400000, 81.07 ],
+									[ 1396303200000, 78.86 ],
+									[ 1398895200000, 76.93 ],
+									[ 1401573600000, 78.5 ], 
+									[ 1404165600000, 73.8 ],
+									[ 1406844000000, 58.35 ],
+									[ 1409522400000, 57.36 ],
+									[ 1412114400000, 59.86 ],
+									[ 1414796400000, 59.53 ], ],
+							type : 'area',
+							fillColor : 'rgba(255, 255, 255, 0)',
+							name: 'Stock prices'
+						},
+						{
+							type : 'scatter',
+							name: 'Predictions',
+							data : [ [ 1320102000000, 75 ], 
+							         [ 1351724400000, 105 ],
+									[ 1383260400000, 66 ], 
+									[ 1414796400000, 57 ],
+									[ 1446332400000, 49 ] ]
+						},
+						{
+							type: 'arearange',
+							name: 'Future Stock Price Prediction',
+								data: [[1414796400000, 59.53, 59.53], [1446324000000, 34.1, 69.25]]
+						}]
+
+			});
+
 }
 
-// $.get('ubs_2003_2013.csv', function(data) {
-// // Split the lines
-// var lines = data.split('\n');
-//    
-// // Iterate over the lines and add categories or series
-// $.each(lines, function(lineNo, line) {
-// var items = line.split(',');
-//        
-// // // header line containes categories
-// // if (lineNo == 0) {
-// // $.each(items, function(itemNo, item) {
-// // if (itemNo > 0) options.xAxis.categories.push(item);
-// // });
-// // }
-//        
-// // the rest of the lines contain data with their name in the first
-// // position
-// // else {
-// var series = {
-// data: []
-// };
-// $.each(items, function(itemNo, item) {
-// if (itemNo == 0) {
-// series.name = item;
-// } else {
-// series.data.push(parseFloat(item));
-// }
-// });
-//            
-// options.series.push(series);
-//    
-// // }
-//        
-// });
-//    
-// // Create the chart
-// var chart = new Highcharts.Chart(options);
-// });
+	showAdidasDeutschBank();
+
+	$('.analyst a').click(function() {
+		var cat = $('.type .active input').val();
+		var analyst = $(this).data('name');
+		var stock=$('.title option:selected').val();
+		console.log(stock);
+		console.log(analyst);
+		console.log(cat);
+		
+		if (cat == 'Stock') {
+
+			if (stock == 'adidas') {
+				if (analyst == 'Deutsche Bank') {
+					showAdidasDeutschBank();
+				} else if (analyst == 'Morgan Stanley') {
+					showAdidasMorgan();
+				} else {
+					showAdidasIndependent();
+				}
+			}
+			if (stock == 'daimler') {
+				showMorgan();
+			}
+			if (stock == 'facebook') {
+				
+			}
+
+		}
+
+
+
+
+
+
+
+
+
+		$('.analyst a.active').removeClass('active');
+		$(this).addClass('active');
+	});
+
+
+
+
+});
