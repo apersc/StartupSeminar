@@ -5,27 +5,74 @@
 <title>Select a title</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<script src="jquery-2.1.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="highcharts.js"></script>
+<script src="highcharts-more.js"></script>
 <link rel="stylesheet" href="common.css">
 </head>
 <body>
-    <h1>Titles<h1>
-    <h2>Select a title</h2>
-    <form role="form">
-        <div class="form-group">
-            <input class="form-control" id="searchinput" type="search" placeholder="Search..." />
+    <header>
+        <img src="logo.png" width="450px"/>
+    </header>
+    <div class="left">
+        <!-- title type chooser -->
+        <div class="btn-group type" data-toggle="buttons">
+            <label class="btn btn-primary">
+                <input type="radio" value="Stock" name="options" id="option1" autocomplete="off" checked>Stock
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" value="Bond" name="options" id="option2" autocomplete="off">Bond
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" value="ETF" name="options" id="option3" autocomplete="off">ETF
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" value="ETF" name="options" id="option3" autocomplete="off">Alternative
+            </label>
         </div>
-        <div id="searchlist" class="list-group">
-            <a class="list-group-item" href="select_analyst.html">UBS</a>
-            <a class="list-group-item" href="select_analyst.html">GOOG</a>
-            <a class="list-group-item" href="select_analyst.html">AAPL</a>
+
+        <br>
+
+        <!-- title chooser -->
+        <div class="btn-group title">
+            <select class="form-control">
+                <option value="one">Facebook</option>
+                <option value="two">Adidas AG</option>
+                <option value="three">Daimler AG</option>
+            </select>
         </div>
-    </form>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<script src="bootstrap-list-filter.min.js"></script>
-<script>
-    $('#searchlist').btsListFilter('#searchinput');
-</script>
+
+        <!-- analyst chooser -->
+        <div class="list-group analyst">
+            <a href="#" class="list-group-item">
+                Deutsche Bank
+                <span class="rating glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span class="rating glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span class="rating glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span class="rating glyphicon glyphicon-star" aria-hidden="true"></span>
+            </a>
+            <a href="#" class="list-group-item active">
+                Morgan Stanley
+                <span class="rating glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span class="rating glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span class="rating glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+                <span class="rating glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+            </a>
+            <a href="#" class="list-group-item">
+                Independent Researc GmbH
+                <span class="rating glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span class="rating glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+                <span class="rating glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+                <span class="rating glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+            </a>
+        </div>
+    </div>
+    <div class="right">
+        <div id="mockup"></div>
+    </div>
+
+<script src="mockup.js"></script>
 </body>
 </html>
 

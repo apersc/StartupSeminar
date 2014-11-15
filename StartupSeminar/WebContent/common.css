@@ -3,6 +3,18 @@ body {
 	margin: 30px auto;
 }
 
+div.right, div.left {
+	widht:400px;
+}
+
+div.right {float: right}
+div.left {float: left}
+
 span.rating {
 	float: right;
+}
+
+.btn-group, .list-group {
+	display:block;
+	margin: 30px 0;
 }
