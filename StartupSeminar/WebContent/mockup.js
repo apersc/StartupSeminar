@@ -16,8 +16,9 @@ $(function() {
 						}
 					}, 
 					arearange: {
-						fillColor: '#7cb5ec',
-						colorOpacity: 0.4
+						fillColor: 'rgba(124, 181, 236, 0.4)',
+						lineColor: 'rgba(124, 181, 236, 1)',
+						lineWidth: 2
 					}
 
 				},
@@ -159,6 +160,11 @@ $(function() {
 						marker: {
 							enabled: false
 						}
+					},
+										arearange: {
+						fillColor: 'rgba(124, 181, 236, 0.4)',
+						lineColor: 'rgba(124, 181, 236, 1)',
+						lineWidth: 2
 					}
 				},
 				xAxis: {
@@ -298,6 +304,11 @@ var showAdidasIndependent = function() {
 						marker: {
 							enabled: false
 						}
+					},
+										arearange: {
+						fillColor: 'rgba(124, 181, 236, 0.4)',
+						lineColor: 'rgba(124, 181, 236, 1)',
+						lineWidth: 2
 					}
 				},
 				xAxis: {
