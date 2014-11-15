@@ -5,7 +5,6 @@
 		<title>Analyst ranking</title>
 	</head>
 	<body>
-	<h1>PickTheBest!<h1>
-		<g:render template="nav"/>
+		main
 	</body>
 </html>

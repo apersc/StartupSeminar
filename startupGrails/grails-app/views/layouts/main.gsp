@@ -11,6 +11,7 @@
 		<g:layoutHead/>
 	</head>
 	<body>
+		<g:render template="nav"/>
 		<g:layoutBody/>
 		<asset:javascript src="application.js"/>
 		<asset:deferredScripts />
