@@ -2,7 +2,7 @@ $(function() {
 	$('#container').highcharts(
 			{
 				title : {
-					text : 'Adidas AG (ADS.DE)'
+					text : 'Abweichungen der Forecasts'
 				},
 				legend: {
 					enabled: false

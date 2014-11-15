@@ -12,6 +12,11 @@ $(function() {
 						marker: {
 							enabled: false
 						}
+					}, 
+					arearange: {
+						fillColor: 'rgba(124, 181, 236, 0.4)',
+						lineColor: 'rgba(124, 181, 236, 1)',
+						lineWidth: 2
 					}
 				},
 				xAxis: {
