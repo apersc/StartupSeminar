@@ -1,10 +1,8 @@
 dataSource {
     pooled = true
     jmxExport = true
-    driverClassName = "com.mysql.jdbc.Driver"
-    // InnoDB better than MyISAM for foreign keys and transactions
-    dialect = "org.hibernate.dialect.MySQL5InnoDBDialect"
-    username = "root"
+    driverClassName = "org.postgresql.Driver"
+    username = "postgres"
     password = ""
 }
 hibernate {
@@ -21,7 +19,7 @@ environments {
     development {
         dataSource {
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
-            url = "jdbc:mysql://127.0.0.1/startup?useUnicode=yes&characterEncoding=UTF-8"
+            url = "jdbc:postgresql://127.0.0.1:5432/startup"
         }
     }
     test {
