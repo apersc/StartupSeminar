@@ -10,17 +10,5 @@
             </button>
             <a class="navbar-brand" href="#">Brand</a>
         </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li><a href="#">Aktie</a></li>
-                <li><a href="#">Bond</a></li>
-                <li><a href="#">ETF</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Clear</a></li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
