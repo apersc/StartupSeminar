@@ -14,7 +14,12 @@ $(function() {
 						marker: {
 							enabled: false
 						}
+					}, 
+					arearange: {
+						fillColor: '#7cb5ec',
+						colorOpacity: 0.4
 					}
+
 				},
 				xAxis: {
 					type: 'datetime'
@@ -69,7 +74,7 @@ $(function() {
 						},
 						{
 							type : 'scatter',
-							name: 'Predictions',
+							name: 'Forecast',
 							data : [ [ 1320102000000, 62 ], 
 							         [ 1351724400000, 75 ],
 									[ 1383260400000, 68 ], 
@@ -78,12 +83,66 @@ $(function() {
 						},
 						{
 							type: 'arearange',
-							name: 'Future Stock Price Prediction',
+							name: 'Future Stock Price Forecast',
 								data: [[1414796400000, 59.53, 59.53], [1446324000000, 53, 39.02]]
 						}]
 
 			});
 
+	};
+
+	var showAdidasMorgan2 = function() {
+	$('#mockup2').highcharts(
+			{
+				title : {
+					text : 'Adidas AG (ADS.DE)'
+				},
+				legend: {
+					enabled: false
+				},
+				xAxis : {
+					title : {
+						text : ''
+					},
+					type: 'datetime'
+				},
+				yAxis : {
+					title : {
+						text : ''
+					},
+					plotBands : {
+						from : 10,
+						to : -10,
+						color : 'rgba(50, 245, 31, .4)'
+					},
+					max : 40,
+					min : -40,
+					labels : {
+						format : '{value} %'
+					}
+				},
+				plotOptions: {
+					scatter: {
+						marker: {
+							radius: 8
+						}
+					}, 
+					errorbar: {
+						stemWidth: 2,
+						whiskerLength: 7,
+						whiskerWidth: 2
+					}
+				},
+				series : [ {
+					name : 'accuracy',
+					type: 'scatter',
+					data : [ [1320102000000, 19.2], [1351724400000, 12.8], [1383260400000, -18.1], [1414796400000, 2.5]]
+				}, {
+					name: 'deviation',
+					type: 'errorbar',
+					data: [[1320102000000, 0, 19.2], [1351724400000, 0, 12.8], [1383260400000, 0, -18.1], [1414796400000, 0, 2.5]]
+				} ]
+			});
 	};
 
 	var showAdidasDeutschBank = function() {
@@ -155,7 +214,7 @@ $(function() {
 						},
 						{
 							type : 'scatter',
-							name: 'Predictions',
+							name: 'Forecast',
 							data : [ [ 1320102000000, 45 ], 
 							         [ 1351724400000, 64 ],
 									[ 1383260400000, 70 ], 
@@ -164,10 +223,64 @@ $(function() {
 						},
 						{
 							type: 'arearange',
-							name: 'Future Stock Price Prediction',
+							name: 'Future Stock Price Forecast',
 								data: [[1414796400000, 59.53, 59.53], [1446324000000, 48.45, 65.5]]
 						}]
 
+			});
+};
+
+var showAdidasDeutschBank2 = function() {
+	$('#mockup2').highcharts(
+			{
+				title : {
+					text : 'Adidas AG (ADS.DE)'
+				},
+				legend: {
+					enabled: false
+				},
+				xAxis : {
+					title : {
+						text : ''
+					},
+					type: 'datetime'
+				},
+				yAxis : {
+					title : {
+						text : ''
+					},
+					plotBands : {
+						from : 10,
+						to : -10,
+						color : 'rgba(50, 245, 31, .4)'
+					},
+					max : 40,
+					min : -40,
+					labels : {
+						format : '{value} %'
+					}
+				},
+				plotOptions: {
+					scatter: {
+						marker: {
+							radius: 8
+						}
+					}, 
+					errorbar: {
+						stemWidth: 2,
+						whiskerLength: 7,
+						whiskerWidth: 2
+					}
+				},
+				series : [ {
+					name : 'accuracy',
+					type: 'scatter',
+					data : [ [1320102000000, -13.5], [1351724400000, -3.76], [1383260400000, -16.37], [1414796400000, 34.39]]
+				}, {
+					name: 'deviation',
+					type: 'errorbar',
+					data: [[1320102000000, 0, -13.5], [1351724400000, 0, -3.76], [1383260400000, 0, -16.37], [1414796400000, 0, 34.39]]
+				} ]
 			});
 };
 
@@ -240,7 +353,7 @@ var showAdidasIndependent = function() {
 						},
 						{
 							type : 'scatter',
-							name: 'Predictions',
+							name: 'Forecast',
 							data : [ [ 1320102000000, 75 ], 
 							         [ 1351724400000, 105 ],
 									[ 1383260400000, 66 ], 
@@ -249,7 +362,7 @@ var showAdidasIndependent = function() {
 						},
 						{
 							type: 'arearange',
-							name: 'Future Stock Price Prediction',
+							name: 'Future Stock Price Forecast',
 								data: [[1414796400000, 59.53, 59.53], [1446324000000, 34.1, 69.25]]
 						}]
 
@@ -257,39 +370,128 @@ var showAdidasIndependent = function() {
 
 }
 
+var showAdidasIndependent2 = function() {
+	$('#mockup2').highcharts(
+			{
+				title : {
+					text : 'Adidas AG (ADS.DE)'
+				},
+				legend: {
+					enabled: false
+				},
+				xAxis : {
+					title : {
+						text : ''
+					},
+					type: 'datetime'
+				},
+				yAxis : {
+					title : {
+						text : ''
+					},
+					plotBands : {
+						from : 10,
+						to : -10,
+						color : 'rgba(50, 245, 31, .4)'
+					},
+					max : 60,
+					min : -60,
+					labels : {
+						format : '{value} %'
+					}
+				},
+				plotOptions: {
+					scatter: {
+						marker: {
+							radius: 8
+						}
+					}, 
+					errorbar: {
+						stemWidth: 2,
+						whiskerLength: 7,
+						whiskerWidth: 2
+					}
+				},
+				series : [ {
+					name : 'accuracy',
+					type: 'scatter',
+					data : [ [1320102000000, 44.23], [1351724400000, 57.92], [1383260400000, -21.18], [1414796400000, -4.25]]
+				}, {
+					name: 'deviation',
+					type: 'errorbar',
+					data: [[1320102000000, 0, 44.23], [1351724400000, 0, 57.92], [1383260400000, 0, -21.18], [1414796400000, 0, -4.25]]
+				} ]
+			});
+};
+
 	showAdidasDeutschBank();
+	showAdidasDeutschBank2();
+
+	$('.title').click(function() {
+		var title = $('.title option:selected').val();
+		console.log(title);
+		
+		if (title == 'adidas') {
+			$('.analyst').show();
+			$('#mockup').show();
+			$('#mockup2').show();
+		} else {
+			$('.analyst').hide();
+			$('#mockup').hide();
+			$('#mockup2').hide();
+		}
+
+	});
+
+	$('.type label').click(function() {
+		var cat = $(this).children('input').val();
+		var analyst = $('.analyst.active').data('name');
+		var stock=$('.title option:selected').val();
+		
+		
+		if (cat == 'Stock') {
+			$('.analyst').show();
+			$('#mockup').show();
+			$('#mockup2').show();
+		} else {
+			$('.analyst').hide();
+			$('#mockup').hide();
+			$('#mockup2').hide();
+		}
+
+	});
 
 	$('.analyst a').click(function() {
 		var cat = $('.type .active input').val();
 		var analyst = $(this).data('name');
 		var stock=$('.title option:selected').val();
-		console.log(stock);
-		console.log(analyst);
-		console.log(cat);
 		
 		if (cat == 'Stock') {
 
 			if (stock == 'adidas') {
 				if (analyst == 'Deutsche Bank') {
 					showAdidasDeutschBank();
+					showAdidasDeutschBank2();
 				} else if (analyst == 'Morgan Stanley') {
 					showAdidasMorgan();
+					showAdidasMorgan2();
 				} else {
 					showAdidasIndependent();
+					showAdidasIndependent2();
 				}
+			} else {
+				$('.analyst').hide();
 			}
+			
+
 			if (stock == 'daimler') {
-				showMorgan();
+				
 			}
 			if (stock == 'facebook') {
 				
 			}
 
 		}
-
-
-
-
 
 
 

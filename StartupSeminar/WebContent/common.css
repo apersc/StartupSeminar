@@ -1,10 +1,10 @@
 body {
-	width: 900px;
+	width: 960px;
 	margin: 30px auto;
 }
 
 div.right, div.left {
-	widht:400px;
+	widht:450px;
 }
 
 div.right {float: right}
