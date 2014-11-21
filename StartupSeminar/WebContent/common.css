@@ -16,3 +16,7 @@ div.left {float: left}
 }
 
 .analyst a div {float:right}
+
+.analyst {
+	min-width: 330px;
+}
